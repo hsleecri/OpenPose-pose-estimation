@@ -28,9 +28,9 @@ pose_tangan = ['WRIST', 'THUMB_CPC', 'THUMB_MCP', 'THUMB_IP', 'THUMB_TIP', 'INDE
 pose_tangan_2 = ['WRIST2', 'THUMB_CPC2', 'THUMB_MCP2', 'THUMB_IP2', 'THUMB_TIP2', 'INDEX_FINGER_MCP2', 'INDEX_FINGER_PIP2', 'INDEX_FINGER_DIP2', 'INDEX_FINGER_TIP2', 'MIDDLE_FINGER_MCP2',
                'MIDDLE_FINGER_PIP2', 'MIDDLE_FINGER_DIP2', 'MIDDLE_FINGER_TIP2', 'RING_FINGER_PIP2', 'RING_FINGER_DIP2', 'RING_FINGER_TIP2',
                'RING_FINGER_MCP2', 'PINKY_MCP2', 'PINKY_PIP2', 'PINKY_DIP2', 'PINKY_TIP2']
-video_path = 'C:/Users/kbk96/Desktop/작업자 데이터 분석/작업표준 제작/영상/1공정/fork2 9mm 내폭 게이지체크/front/'
-file_name = 'front_1_작업물 박스 배치.mp4'
-save_path = "C:/Users/kbk96/Desktop/작업자 데이터 분석/작업표준 제작/영상/1공정/fork2 9mm 내폭 게이지체크/front/"
+video_path = 'C:\\Users\\hslee\\Desktop\\dataset\\HYEONSU\\PROCESS4_FRONT_RGB\\'
+file_name = '4공정_FRONT_CYCLE.mp4'
+save_path = "C:\\Users\\hslee\\Desktop\\dataset\\HYEONSU\\PROCESS4_FRONT_RGB\\"
 cap = cv2.VideoCapture(video_path+file_name)
 suc,frame_video = cap.read()
 #vid_writer = cv2.VideoWriter('C:/Users/SMLC/Desktop/작업자 데이터 분석/결과/skeleton/2.mp4', cv2.VideoWriter_fourcc('H','2','6','4'), 10, (frame_video.shape[1], frame_video.shape[0]))
@@ -199,8 +199,8 @@ with mp_holistic.Holistic(
         image = cv2.flip(image, -1)
         image_asli = cv2.flip(image_asli, -1)
         cv2.putText(image, "FPS: %f" % (1.0 / (time.time() - fps_time)), (10, 10),cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2,)
-        cv2.imshow('MediaPipe Holistic', cv2.resize(image,(0,0),fx=0.1,fy=0.1, interpolation=cv2.INTER_AREA) ) #sudah menampilkan backgrounnd hitam dan skeleton
-        cv2.imshow('Gambar asli', cv2.resize(image_asli,(0,0),fx=0.1,fy=0.1, interpolation=cv2.INTER_AREA) )
+        cv2.imshow('MediaPipe Holistic', cv2.resize(image,(0,0),fx=0.5,fy=0.5, interpolation=cv2.INTER_AREA) ) #sudah menampilkan backgrounnd hitam dan skeleton
+        cv2.imshow('Gambar asli', cv2.resize(image_asli,(0,0),fx=0.5,fy=0.5, interpolation=cv2.INTER_AREA) )
         count = count + 1
         print(count)
         fps_time = time.time()
