@@ -29,7 +29,7 @@ pose_tubuh = ['NOSE', 'LEFT_EYE_INNER', 'LEFT_EYE', 'LEFT_EYE_OUTER', 'RIGHT_EYE
 #                'MIDDLE_FINGER_PIP2', 'MIDDLE_FINGER_DIP2', 'MIDDLE_FINGER_TIP2', 'RING_FINGER_PIP2', 'RING_FINGER_DIP2', 'RING_FINGER_TIP2',
 #                'RING_FINGER_MCP2', 'PINKY_MCP2', 'PINKY_PIP2', 'PINKY_DIP2', 'PINKY_TIP2']
 video_path = 'C:\\Users\\hslee\\Desktop\\dataset\\HYEONSU\\4공정\\'
-file_name = '4공정_FRONT_CYCLE_2프레임 삭제.mp4'
+file_name = '4공정_FRONT_CYCLE_제외.mp4'
 save_path = 'C:\\Users\\hslee\\Desktop\\dataset\\HYEONSU\\4공정\\'
 cap = cv2.VideoCapture(video_path+file_name)
 suc,frame_video = cap.read()
